@@ -132,11 +132,11 @@ export default function Home() {
       <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-[#e8e1d9]">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-[#233dff] rounded-full flex items-center justify-center text-white font-bold text-sm">
-              PK
+              PUC
             </div>
-            <span className="font-bold text-lg text-[#1A1A1A]">Project Kinisi</span>
+            <span className="font-bold text-lg text-[#1A1A1A]">Team Greece</span>
           </div>
 
           {/* Desktop Menu */}
