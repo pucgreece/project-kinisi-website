@@ -43,39 +43,59 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* Modern Mediterranean Civic Design System */
+  /* Primary Navy (Greek flag inspired) */
+  --navy-primary: #1C2B5E;
+  --navy-light: #2A3F7F;
+  
+  /* Accent Gold (Mediterranean warmth) */
+  --gold-accent: #C8922A;
+  --gold-light: #E8B860;
+  
+  /* Background & Text */
+  --bg-warm: #FAF7F2;
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B6560;
+  
+  /* Accent Colors */
+  --terracotta: #C4603A;
+  --terracotta-light: #E07856;
+  
+  /* Semantic Colors */
+  --primary: var(--navy-primary);
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: var(--navy-primary);
+  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: var(--gold-accent);
+  --chart-2: var(--navy-primary);
+  --chart-3: var(--terracotta);
+  --chart-4: var(--navy-light);
+  --chart-5: var(--gold-light);
+  
+  --radius: 0.5rem;
+  --background: var(--bg-warm);
+  --foreground: var(--text-primary);
+  --card: #FFFFFF;
+  --card-foreground: var(--text-primary);
+  --popover: #FFFFFF;
+  --popover-foreground: var(--text-primary);
+  --secondary: var(--gold-accent);
+  --secondary-foreground: #FFFFFF;
+  --muted: #E8E3DC;
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--gold-accent);
+  --accent-foreground: #FFFFFF;
+  --destructive: var(--terracotta);
+  --destructive-foreground: #FFFFFF;
+  --border: #E8E3DC;
+  --input: #FFFFFF;
+  --ring: var(--gold-accent);
+  --sidebar: var(--navy-primary);
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-accent: var(--gold-accent);
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: var(--navy-light);
+  --sidebar-ring: var(--gold-accent);
 }
 
 .dark {
@@ -117,8 +137,35 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
     @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+  
+  h1 {
+    @apply text-5xl md:text-6xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-4xl md:text-5xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl leading-snug;
+  }
+  
+  p {
+    @apply text-lg leading-relaxed;
+  }
+  
+  .text-secondary {
+    @apply text-[#6B6560];
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -130,6 +177,11 @@
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
   }
 }
 
