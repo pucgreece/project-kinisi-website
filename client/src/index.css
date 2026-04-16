@@ -43,59 +43,55 @@
 }
 
 :root {
-  /* Modern Mediterranean Civic Design System */
-  /* Primary Navy (Greek flag inspired) */
-  --navy-primary: #1C2B5E;
-  --navy-light: #2A3F7F;
+  /* Modern Greek Color Scheme */
+  /* Primary Blue (Greek flag inspired) */
+  --blue-primary: #233dff;
+  --blue-dark: #1a2ba8;
   
-  /* Accent Gold (Mediterranean warmth) */
-  --gold-accent: #C8922A;
-  --gold-light: #E8B860;
-  
-  /* Background & Text */
-  --bg-warm: #FAF7F2;
+  /* Background */
+  --bg-cream: #f5efe6;
   --text-primary: #1A1A1A;
-  --text-secondary: #6B6560;
+  --text-secondary: #5a5a5a;
   
   /* Accent Colors */
-  --terracotta: #C4603A;
-  --terracotta-light: #E07856;
+  --accent-blue: #233dff;
+  --accent-light: #5a6fff;
   
   /* Semantic Colors */
-  --primary: var(--navy-primary);
+  --primary: var(--blue-primary);
   --primary-foreground: #FFFFFF;
-  --sidebar-primary: var(--navy-primary);
+  --sidebar-primary: var(--blue-primary);
   --sidebar-primary-foreground: #FFFFFF;
-  --chart-1: var(--gold-accent);
-  --chart-2: var(--navy-primary);
-  --chart-3: var(--terracotta);
-  --chart-4: var(--navy-light);
-  --chart-5: var(--gold-light);
+  --chart-1: var(--accent-blue);
+  --chart-2: var(--blue-dark);
+  --chart-3: var(--accent-light);
+  --chart-4: var(--blue-primary);
+  --chart-5: var(--accent-light);
   
   --radius: 0.5rem;
-  --background: var(--bg-warm);
+  --background: var(--bg-cream);
   --foreground: var(--text-primary);
   --card: #FFFFFF;
   --card-foreground: var(--text-primary);
   --popover: #FFFFFF;
   --popover-foreground: var(--text-primary);
-  --secondary: var(--gold-accent);
+  --secondary: var(--accent-blue);
   --secondary-foreground: #FFFFFF;
-  --muted: #E8E3DC;
+  --muted: #e8e1d9;
   --muted-foreground: var(--text-secondary);
-  --accent: var(--gold-accent);
+  --accent: var(--accent-blue);
   --accent-foreground: #FFFFFF;
-  --destructive: var(--terracotta);
+  --destructive: #dc2626;
   --destructive-foreground: #FFFFFF;
-  --border: #E8E3DC;
+  --border: #e8e1d9;
   --input: #FFFFFF;
-  --ring: var(--gold-accent);
-  --sidebar: var(--navy-primary);
+  --ring: var(--accent-blue);
+  --sidebar: var(--blue-primary);
   --sidebar-foreground: #FFFFFF;
-  --sidebar-accent: var(--gold-accent);
+  --sidebar-accent: var(--accent-blue);
   --sidebar-accent-foreground: #FFFFFF;
-  --sidebar-border: var(--navy-light);
-  --sidebar-ring: var(--gold-accent);
+  --sidebar-border: var(--blue-dark);
+  --sidebar-ring: var(--accent-blue);
 }
 
 .dark {
@@ -140,12 +136,13 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 700;
+    letter-spacing: -0.02em;
   }
   
   h1 {
